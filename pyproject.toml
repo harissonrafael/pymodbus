@@ -1,0 +1,21 @@
+[project]
+name = "examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = [
+    "asyncua>=2.1.0",
+    "pymodbus>=3.16.2",
+]
+
+[project.scripts]
+examples = "examples:main"
+server_async = "examples.server_async:main"
+simple_async_client = "examples.simple_async_client:main"
+opcua_server = "examples.opcua_server_minimal:cli"
+opcua_client = "examples.opcua_client_minimal:cli"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
